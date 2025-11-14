@@ -3,7 +3,7 @@ manifestVersion: 1
 id: grin-node
 name: Grin Node
 tagline: Full Mimblewimble/Grin node with a powerful UI dashboard.
-icon: icon: https://raw.githubusercontent.com/wiesche89/umbrel-community-app-store/main/public/grin-node/icons/logo.png
+icon: https://raw.githubusercontent.com/wiesche89/umbrel-community-app-store/main/public/grin-node/icons/logo.png
 category: Cryptocurrencies
 version: "0.1.0"
 port: 80
