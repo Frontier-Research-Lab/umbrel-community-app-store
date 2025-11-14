@@ -1,0 +1,48 @@
+version: "3.7"
+
+services:
+
+  # Von Umbrel benutzt, um dein Web-UI zu erreichen
+  app_proxy:
+    environment:
+      # Format: <app-id>_<docker-service-name>_1
+      # app-id = grin-node  (aus umbrel-app.yml)
+      # service-name = ui   (siehe unten)
+      APP_HOST: grin-node_ui_1
+      # Interner Port im UI-Container (Nginx lauscht auf 80)
+      APP_PORT: 80
+
+  # Frontend/UI (Nginx/SPA/etc.)
+  ui:
+    image: wiesche89/grin-node-docker:0.1.0
+    restart: unless-stopped
+    depends_on:
+      - controller
+    environment:
+      # UI spricht den Controller über das interne Docker-Netz an.
+      # Falls dein Controller einen anderen Port nutzt, hier anpassen.
+      GRIN_NODE_CONTROLLER_URL: http://controller:8080
+    # Kein "ports:", Umbrel routet über app_proxy ins UI
+
+  # Backend-Controller + eigentlicher Grin Node
+  controller:
+    image: wiesche89/grin-node-controller:0.1.0
+    user: "1000:1000"
+    init: true
+    restart: unless-stopped
+
+    # Persistente Daten für Chain + Config
+    volumes:
+      - ${APP_DATA_DIR}/grin/data:/data
+      - ${APP_DATA_DIR}/grin/config:/config
+
+    # Externe Ports für P2P & APIs
+    ports:
+      - "3414:3414"   # Grin P2P
+      - "3413:3413"   # Foreign API
+      - "3415:3415"   # Owner API (falls genutzt)
+
+    environment:
+      GRIN_CHAIN_TYPE: Mainnet
+      GRIN_HOME: /data
+      RUST_BACKTRACE: "1"
