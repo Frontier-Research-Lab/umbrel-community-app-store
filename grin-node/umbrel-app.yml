@@ -5,11 +5,11 @@ name: Grin Node
 tagline: Full Mimblewimble/Grin node with a powerful UI dashboard.
 icon: https://raw.githubusercontent.com/wiesche89/umbrel-community-app-store/master/grin-node/icons/logo.png
 category: Cryptocurrencies
-version: "0.1.0"
+version: "0.2.0"
 port: 3410
 
 description: >-
-  Run a full Mimblewimble/Grin Node directly on your Umbrel OS.  
+  Run a full Mimblewimble/Grin Node or Grin++ Node directly on your Umbrel OS.  
   This app includes a complete dashboard to monitor chain sync,
   peers, blocks, transactions, and a geo map of connected nodes.
 
