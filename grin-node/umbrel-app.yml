@@ -5,7 +5,7 @@ name: Grin Node
 tagline: Full Mimblewimble/Grin node with a powerful UI dashboard.
 icon: https://raw.githubusercontent.com/wiesche89/umbrel-community-app-store/master/grin-node/icons/logo.png
 category: Cryptocurrencies
-version: "0.2.2"
+version: "0.2.1"
 port: 3410
 
 description: >-
@@ -15,6 +15,7 @@ description: >-
 
   Features:
     • Full Rust Grin node (v5.4+)
+    • Full Grin++ node (v1.2.8+)
     • Real-time dashboard UI
     • Peer explorer with ban/unban
     • Transaction pool visualizer
@@ -39,7 +40,7 @@ gallery:
 
 releaseNotes: >-
   Initial release of the Grin Node for Umbrel.  
-  Includes the Grin 5.4 Rust node, full monitoring UI, 
+  Includes the Grin 5.4 Rust node and the Grin++ node, full monitoring UI, 
   persistent chain storage, peer map, block explorer,
   and automatic service management.
 
