@@ -18,11 +18,6 @@ services:
     restart: unless-stopped
     depends_on:
       - controller
-    environment:
-      # Falls dein Controller einen anderen Port nutzt, hier anpassen.
-      # UI spricht den Controller über das interne Docker-Netz an.
-      GRIN_NODE_CONTROLLER_URL: http://umbrel.local:13416/
-    # Kein "ports:", Umbrel routet über app_proxy ins UI
 
   # Backend-Controller + eigentlicher Grin Node
   controller:
