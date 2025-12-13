@@ -17,11 +17,11 @@ services:
     image: wiesche89/grin-node-docker:0.2.4
     restart: unless-stopped
     depends_on:
-      - controllerTestnet
+      - controller
     environment:
-      # UI spricht den Controller über das interne Docker-Netz an.
       # Falls dein Controller einen anderen Port nutzt, hier anpassen.
-      GRIN_NODE_CONTROLLER_URL: http://controllerTestnet:8080
+      # UI spricht den Controller über das interne Docker-Netz an.
+      GRIN_NODE_CONTROLLER_URL: http://controller:8080
     # Kein "ports:", Umbrel routet über app_proxy ins UI
 
   # Backend-Controller + eigentlicher Grin Node
@@ -32,8 +32,8 @@ services:
     restart: unless-stopped
 
     volumes:
-      - ${APP_DATA_DIR}/grin-rust-home:/root/.grin
-      - ${APP_DATA_DIR}/grinpp-home:/root/.GrinPP
+      - ${APP_DATA_DIR}/grin-rust-home-testnet:/root/.grin
+      - ${APP_DATA_DIR}/grinpp-home-testnet:/root/.GrinPP
 
     ports:
       - "13414:13414"
