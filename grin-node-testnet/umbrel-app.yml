@@ -3,7 +3,7 @@ manifestVersion: 1
 id: grin-node-testnet
 name: Grin Node Testnet
 tagline: Full Mimblewimble/Grin testnet node with a powerful UI dashboard.
-icon: https://raw.githubusercontent.com/wiesche89/umbrel-community-app-store/master/grin-node-testnet/icons/logo.png
+icon: https://raw.githubusercontent.com/Frontier-Research-Lab/umbrel-community-app-store/master/grin-node-testnet/icons/logo.png
 category: Cryptocurrencies
 version: "0.2.12"
 port: 13410
@@ -32,11 +32,11 @@ repo: https://github.com/wiesche89/grin-node-controller
 support: https://github.com/wiesche89/grin-node-controller/issues
 
 gallery:
-  - https://raw.githubusercontent.com/wiesche89/umbrel-community-app-store/master/grin-node-testnet/icons/galleryHome.png
-  - https://raw.githubusercontent.com/wiesche89/umbrel-community-app-store/master/grin-node-testnet/icons/galleryMap.png
-  - https://raw.githubusercontent.com/wiesche89/umbrel-community-app-store/master/grin-node-testnet/icons/galleryPeers.png
-  - https://raw.githubusercontent.com/wiesche89/umbrel-community-app-store/master/grin-node-testnet/icons/galleryTransaction.png
-  - https://raw.githubusercontent.com/wiesche89/umbrel-community-app-store/master/grin-node-testnet/icons/galleryChain.png
+  - https://raw.githubusercontent.com/Frontier-Research-Lab/umbrel-community-app-store/master/grin-node-testnet/icons/galleryHome.png
+  - https://raw.githubusercontent.com/Frontier-Research-Lab/umbrel-community-app-store/master/grin-node-testnet/icons/galleryMap.png
+  - https://raw.githubusercontent.com/Frontier-Research-Lab/umbrel-community-app-store/master/grin-node-testnet/icons/galleryPeers.png
+  - https://raw.githubusercontent.com/Frontier-Research-Lab/umbrel-community-app-store/master/grin-node-testnet/icons/galleryTransaction.png
+  - https://raw.githubusercontent.com/Frontier-Research-Lab/umbrel-community-app-store/master/grin-node-testnet/icons/galleryChain.png
 
 releaseNotes: >-
   Initial release of the Grin Node Testnet app for Umbrel.
